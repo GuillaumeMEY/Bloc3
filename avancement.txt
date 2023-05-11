@@ -1,0 +1,11 @@
+inscription fonctionne
+    - securisation a faire
+    - header a voir
+
+loggin OK?
+    -redirection off ( renvoi sur page login)
+    a confirme les authentification
+
+bdd 
+    refaire la bdd pour mettre l'auto increment
+
