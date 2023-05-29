@@ -25,11 +25,10 @@ foreach($membres as $membre){
         $_SESSION['id_user'] = $id;
         
 
-    var_dump ($_SESSION);
+        var_dump ($_SESSION);
     
-    header('location:../view/profil.php');
-}   
-else{
-   header('location:../view/auth/login.php');
-}
+        header('location:../view/profil.php');
+    }else{
+    header('location:../view/auth/login.php');
+    }
 }
