@@ -2,37 +2,19 @@
 
 require_once('../function/function.php');
 
-// var_dump($_POST);
-
-$ID_membre = createMembre($db, $_POST['identifiant'], $_POST['password'], $_POST['mail']);
-
-
-// var_dump ($ID_membre);
-
-
-session_unset(); // vide le "cache" de $_SESSION
-
+$id = createMembre($db, $_POST['identifiant'], $_POST['password']);
 
 $membres = readAllMembre($db);
-// var_dump ($membres);
-// var_dump ($_POST);
 
 foreach($membres as $membre){
-    if($_POST['password'] == $membre['password'] && $_POST['user'] == $membre['name_user']){
-
-
-
-        $_SESSION['user'] = $_POST['user'];
-
-        $identifiant = $_SESSION['user'];
+    if($_POST['password'] == $membre['password'] && $_POST['identifiant'] == $membre['name_user']){
         
-        $mail = readelement($db,'mail', $identifiant);
-        $id = readelement($db,'id_user', $identifiant);
+        $id = readelement($db,'id_user', $_POST['identifiant']);
         
-        $_SESSION['mail'] = $mail;
+        session_start();
         $_SESSION['id_user'] = $id;
+        $_SESSION['user'] = $_POST['identifiant'];
+
     }
 }
-
-
 header('location:../view/profil.php');

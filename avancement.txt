@@ -1,11 +1,6 @@
-inscription fonctionne
-    - securisation a faire
-    - header a voir
+cryptage et hashage a faire
 
-loggin OK?
-    -redirection off ( renvoi sur page login)
-    a confirme les authentification
+css
 
-bdd 
-    refaire la bdd pour mettre l'auto increment
+validation de suppression a voir
 

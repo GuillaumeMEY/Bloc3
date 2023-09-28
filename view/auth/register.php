@@ -18,11 +18,10 @@
         <p>Choisissez un mot de passe<br/>
         <input type="password" name="password" placeholder="Mot de passe" required class="txtbox"/></p>
 
-        <p>E-mail<br/>
-        <input type="text" name="mail" placeholder="E-mail" required class="txtBox"/></p>
-
         <button class="bouton" type="submit"  value="Envoyer">Inscription</button>
 
     </form>
+
+    <h2><a href="login.php"> Se connecter</a></h2>
 </body>
 </html>

@@ -1,7 +1,13 @@
 <?php
 
 session_start();
-var_dump($_SESSION);
+
+// Vérifier si l'utilisateur n'est pas connecté
+if (!isset($_SESSION['id_user'])) {
+    header("Location:../view/auth/login.php");
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,9 +24,9 @@ var_dump($_SESSION);
         <p>Titre:<br/>
         <input type="text" name="title"  required class="txtBox"/><br/></p>
 
-        <textarea id='text' name="text" placeholder='Racconte nous une histoire'></textarea>
+        <textarea id='text' name="text" placeholder='Racconte nous une histoire'></textarea><br/>
 
-        <button class="bouton" type="submit"  value="Envoyer">Connexion</button>
+        <button class="bouton" type="submit"  value="Envoyer">Ajouter mon texte</button>
     </form>
     
     

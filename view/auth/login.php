@@ -1,3 +1,7 @@
+<?php
+session_unset();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,5 +22,7 @@
 
             <button class="bouton" type="submit"  value="Envoyer">Connexion</button>
         </form>
+
+        <h2><a href="register.php"> S'inscrire?</a></h2>
 </body>
 </html>
